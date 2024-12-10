@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+body {
+    background-color: rgb(61, 22, 22);
+    color: white;
+}
+
+header nav {
+    background-color: black;
+    color: rgb(225, 214, 214);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header nav h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    align-items: center;
+
+}
+
+.searchBox {
+    width: 300px;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+}
+
+.searchbtn {
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 3px;
+    background-color: rgb(243, 65, 0);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.searchbtn:hover {
+    background-color: rgb(209, 94, 52);
+}
+
+.searchbtn:active {
+    background-color: rgb(78, 40, 26);
+}
+
+/* main section  */
+.recipe-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 10px auto;
+    padding: 20px;
+    width: 80%;
+}
+
+.recipe {
+    background-color: #79687b;
+    color: rgb(186, 176, 176);
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    padding: 2px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+    max-width: 350px;
+    transition: transform 0.3s ease-in-out;
+}
+.recipe:hover {
+    color: white;
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    transform: scale(1.02);
+}
+.recipe img{
+    height: 300px;
+}
+.recipe h3{
+    font-size: 24px;
+}
+.recipe h3:hover{
+    color: chocolate;
+}
+.recipe p{
+    font-size: 20px;
+    color: #4a4a4a;
+    margin: 5px 0;
+}
+.recipe p:hover{
+   color: blueviolet;
+}
+.recipe span{
+    font-weight: 600;
+}
+.recipe span:hover{
+    color: brown;
+}
+.recipe button{
+    padding: 7px;
+    margin: 18px auto;
+    border: 1px solid blue;
+    outline: 0;
+    border-radius: 5px;
+    background-color: rgb(243, 65, 0);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-weight: 600;
+}
+.recipe button:hover {
+    background-color: rgb(209, 94, 52);
+}
+
+.recipe button:active {
+    background-color: rgb(78, 40, 26);
+    border: 1px black;
+}
+/* Recipe Details */
+.recipe-details{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    bottom: 30%;
+    width: 40%;
+    height: 60%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    font-size: 15px;
+background-color: #79687b;
+border-radius: 12px;
+transition: all 0.5s ease-in-out;
+overflow-y: scroll;
+}
+
+.recipe-details-content{
+    padding: 30px;
+}
+.recipeName{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.ingredientList li{
+margin-top: 10px;
+margin-left: 20px;
+}
+.recipeInstructions p{
+    line-height: 30px;
+    white-space: pre-line;
+}
+.recipe , .ingredientList ,.recipeInstructions{
+    margin-bottom: 10px;
+}
+.recipe-close-btn{
+    border: none;
+    padding: 7px;
+    border-radius: 4px ;
+    background-color: rgb(243, 65, 0);
+    color: white;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recipe-close-btn:hover{
+    background-color: rgb(209, 94, 52);
+}
+.recipe-close-btn:active{
+    background-color: rgb(78, 40, 26);
+}
+
+/* adding scroll bar to recipe details popup */
+.recipe-details::-webkit-scrollbar{
+    width: 10px;
+}
+.recipe-details::-webkit-scrollbar-thumb{
+    background: #b5b5b5;
+    border-radius: 16px;
+    --webkit-border-radius: 16px;
+}
+
